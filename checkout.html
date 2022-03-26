@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project NEO</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/cartcss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/3cb7508c39.js" crossorigin="anonymous"></script>
+</head>
+<style>
+   
+  body{
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(to right , #0d1213 #0b2c5a);
+background: -webkit-linear-gradient(to right, #0d1213, #0b4957); 
+background: linear-gradient(to right , #242525 #0b2c5a);
+  }
+  
+.card{
+  background:#16181a;  border-radius:14px; max-width: 300px; display:block; margin:auto;
+  padding:60px; padding-left:20px; padding-right:20px;box-shadow: 2px 10px 40px black; z-index:99;
+}
+
+.logo-card{max-width:50px; margin-bottom:15px; margin-top: -19px;}
+
+label{display:flex; font-size:10px; color:white; opacity:.4;}
+
+input{font-family: 'Work Sans', sans-serif;background:transparent; border:none; border-bottom:1px solid transparent; color:#dbdce0; transition: border-bottom .4s;}
+input:focus{border-bottom:1px solid #1abc9c; outline:none;}
+
+.cardnumber{display:block; font-size:20px; margin-bottom:8px; }
+
+.name{display:block; font-size:15px; max-width: 200px; float:left; margin-bottom:15px;}
+
+.toleft{float:left;}
+.ccv{width:50px; margin-top:-5px; font-size:15px;}
+
+.receipt{background: #dbdce0; border-radius:4px; padding:5%; padding-top:200px; max-width:600px; display:block; margin:auto; margin-top:-180px; z-index:-999; position:relative;}
+
+.col{width:50%; float:left;}
+.bought-item{background:#f5f5f5; padding:2px;}
+.bought-items{margin-top:-3px;}
+
+.cost{color:#3a7bd5;}
+.seller{color: #3a7bd5;}
+.description{font-size: 13px;}
+.price{font-size:12px;}
+.comprobe{text-align:center;}
+.proceed{position:absolute; transform:translate(300px, 10px); width:50px; height:50px; border-radius:50%; background:#1abc9c; border:none;color:white; transition: box-shadow .2s, transform .4s; cursor:pointer;}
+.proceed:active{outline:none; }
+.proceed:focus{outline:none;box-shadow: inset 0px 0px 5px white;}
+.sendicon{filter:invert(100%); padding-top:2px;}
+
+@media (max-width: 900px){
+  .proceed{transform:translate(250px, 10px);}
+  .col{display:block; margin:auto; width:100%; text-align:center;}
+}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id="ontop">
+    <a class="navbar-brand" href="#"><img src="imges/logo10.png" alt="" width="120px" height="55px"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html" style="color: azure;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="products.html" style="color: azure;">Products</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="category.html" style="color: azure;">Category</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="aboutus.html" style="color: azure;">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="contactus.html" style="color: azure;">Contact Us</a>
+        </li>
+        
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="search" aria-label="Search">
+      </form>
+      <div class="search mr-3">
+        <a href="search.html" class="btn btn-sm btn-outline-primary">
+          Submit
+        </a>
+      </div>
+      <div class="cart1">
+            <a href="cart.html">
+                <i  class="fas fa-shopping-cart"></i>
+              <span class="badge badge-pill badge-primary">2</span>
+            </a>
+      </div>
+    </div>
+  </nav>
+<!--body-->
+  <body>
+      
+<div class="container" style="margin-top: 20px; margin-bottom: 20px; width: 950px; background-image: linear-gradient(to right , #0d1213 #0b2c5a);">
+    <div class="card">
+     <a href="confirmation.html"><button class="proceed"><svg class="sendicon" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+  </svg></button></a>
+     <img src="https://seeklogo.com/images/V/VISA-logo-62D5B26FE1-seeklogo.com.png" class="logo-card">
+   <label>Card number:</label>
+   <input id="user" type="text" class="input cardnumber"  placeholder="1234 5678 9101 1121">
+   <label>Name:</label>
+   <input class="input name"  placeholder="Pranav Tripathi">
+   <label class="toleft">CCV:</label>
+   <input class="input toleft ccv" placeholder="321">
+    </div>
+    <div class="receipt">
+      <div class="col"><p>Cost:</p>
+      <h2 class="cost">₹ 850</h2><br>
+      <p>Name:</p>
+      <h2 class="seller">Pranav</h2>
+      <p style="color: cornflowerblue;">Kanpur, Uttar Pradesh , 208027</p>
+      </div>
+      <div class="col">
+        <p>Bought Items:</p>
+        <h3 class="bought-items">Mug n Brush</h3>
+        <p class="bought-items description">This is all that you need !</p>
+        <p class="bought-items price">₹ 550 (50% discount)</p><br>
+        <h3 class="bought-items">Spoon n Med</h3>
+        <p class="bought-items description">This is all that you need !</p>
+        <p class="bought-items price">₹ 350 (50% discount)</p><br>
+      </div>
+      <p class="comprobe">This information will be sended to your email</p>
+    </div>
+  </div>
+  </body>
+<!--footer-->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-cta py-5">
+        <div class="row">
+          <div class="col-sm-6 col-xl-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find us</h4>
+                <span>Kanpur, Uttar Pradesh, 208027</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call us</h4>
+                <span>99999-55555</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Mail us</h4>
+                <span>mail@info.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content py-5">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <a href="#"><img src="imges/logo10.png" class="img-fluid" width="40%" height="15%"></a>
+              </div>
+              <div class="footer-text">
+                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem ipsum dolor sit amet.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Follow us</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-widget">
+               <div class="footer-widget-heading">
+                 <h3>Useful Links</h3>
+               </div>
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Expert Team</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Latest News</a></li>
+               </ul>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer-widget">
+               <div class="footer-widget-heading">
+                 <h3>Subscribe</h3>
+               </div>
+                <div class="footer-text">
+                  <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                </div>
+                <div class="subscribe-form">
+                  <form action="#">
+                    <input type="text" placeholder="Email Address">
+                    <button><i class="fab fa-telegram-plane"></i></button>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+              <p>Copyright © 2021, All Right Reserved <a href="#">Ecommercio</a></p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block">
+            <div class="footer-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+  <!--back to top-->
+  <a id="back-to-top" href="#ontop" class="btn btn-light btn-lg back-to-top"
+   role="button"><i class="fas fa-chevron-up"></i></a>
+  
+<script src="js/myjs.js"></script>
+</html>
