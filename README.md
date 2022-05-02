@@ -18,3 +18,6 @@ the project is a full-fledged website made with HTML5, CSS3, and javascript.
 
 
 ![Screenshot (714)](https://user-images.githubusercontent.com/88943739/166314344-ae07bf17-bcb2-4c4e-a997-6368e2e05074.png)
+
+
+![Screenshot (715)](https://user-images.githubusercontent.com/88943739/166314449-4316fd23-bbec-47c1-b75f-b7ed400c5626.png)
